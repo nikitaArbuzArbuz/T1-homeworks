@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Table(name = "account")
 public class Account extends AbstractPersistable<Long> {
+
     @Column(name = "account_type")
     @Enumerated(value = EnumType.STRING)
     private AccountType accountType;
