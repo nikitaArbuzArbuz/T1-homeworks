@@ -24,6 +24,8 @@ t1:
       server: localhost:9092
     consumer:
       group-id: t1-demo
+      group-id-account: t1_consumer_account
+      group-id-transaction: t1_consumer_transaction
       max.poll.records: 10
     producer:
       enable: true
@@ -31,6 +33,8 @@ t1:
       client_registration: t1_demo_client_registration
       client_id_registered: t1_demo_client_registered
       client_transactions: t1_demo_client_transactions
+      t1_demo_accounts: t1_demo_accounts
+      t1_demo_transactions: t1_demo_transactions
 
     listener:
       poll-timeout: 1000
