@@ -7,9 +7,9 @@ import ru.t1.java.demo.model.dto.AccountDto;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE,
         componentModel = MappingConstants.ComponentModel.SPRING)
 public interface AccountMapper {
-    Account toEntity(AccountDto accountDto);
+    Account map(AccountDto accountDto);
 
-    AccountDto toDto(Account account);
+    AccountDto map(Account account);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Account partialUpdate(AccountDto accountDto, @MappingTarget Account account);

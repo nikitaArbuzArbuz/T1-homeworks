@@ -2,9 +2,7 @@ package ru.t1.java.demo.aop;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 import ru.t1.java.demo.kafka.producers.KafkaErrorTraceProducer;
@@ -29,7 +27,7 @@ public class ErrorTraceAspect {
         Object[] params = joinPoint.getArgs();
         String stackTrace = Arrays.toString(exception.getStackTrace());
         log.error("Sending error trace to Kafka: method = {}, params = {}, stackTrace = {}",
-                    methodName, Arrays.toString(params), stackTrace);
+                methodName, Arrays.toString(params), stackTrace);
 
         kafkaErrorTraceProducer.sendErrorTrace(methodName, params, stackTrace);
     }

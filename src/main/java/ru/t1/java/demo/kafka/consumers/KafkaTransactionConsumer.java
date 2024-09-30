@@ -34,7 +34,7 @@ public class KafkaTransactionConsumer {
 
         try {
             List<Transaction> transactions = messageList.stream()
-                    .map(transactionMapper::toEntity)
+                    .map(transactionMapper::map)
                     .toList();
             transactionService.saveTransaction(transactions);
         } finally {
@@ -42,6 +42,6 @@ public class KafkaTransactionConsumer {
         }
 
 
-        log.debug("Client consumer: записи обработаны");
+        log.debug("Transaction consumer: записи обработаны");
     }
 }

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.t1.java.demo.aop.HandlingResult;
 import ru.t1.java.demo.aop.LogException;
 import ru.t1.java.demo.aop.Metric;
-import ru.t1.java.demo.kafka.producers.KafkaDefaultProducer;
 import ru.t1.java.demo.model.dto.AccountDto;
+import ru.t1.java.demo.service.AccountService;
 import ru.t1.java.demo.util.JsonParser;
 
 import java.util.List;
@@ -18,7 +18,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class AccountController {
-    private final KafkaDefaultProducer kafkaDefaultProducer;
+    private static final String ACCOUNT_DATA = "ACCOUNT_DATA";
+    private final AccountService accountService;
     @Value("${t1.kafka.topic.t1_demo_accounts}")
     private String topic;
 
@@ -27,7 +28,7 @@ public class AccountController {
     @GetMapping(value = "/account/parse")
     @HandlingResult
     public void parseSource() {
-        List<AccountDto> accountData = JsonParser.parseJsonData("ACCOUNT_DATA", AccountDto[].class);
-        accountData.forEach(dto -> kafkaDefaultProducer.sendTo(topic, dto));
+        List<AccountDto> accountData = JsonParser.parseJsonData(ACCOUNT_DATA, AccountDto[].class);
+        accountService.sendToProducer(accountData, topic);
     }
 }

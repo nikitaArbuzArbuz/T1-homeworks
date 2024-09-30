@@ -30,11 +30,11 @@ public class KafkaAccountConsumer {
                                  @Header(KafkaHeaders.RECEIVED_TOPIC) String topic,
                                  @Header(KafkaHeaders.RECEIVED_KEY) String key) {
 
-        log.debug("Client consumer: Обработка новых сообщений");
+        log.debug("Account consumer: Обработка новых сообщений");
 
         try {
             List<Account> accounts = messageList.stream()
-                    .map(accountMapper::toEntity)
+                    .map(accountMapper::map)
                     .toList();
             accountService.saveAccount(accounts);
         } finally {
@@ -42,6 +42,6 @@ public class KafkaAccountConsumer {
         }
 
 
-        log.debug("Client consumer: записи обработаны");
+        log.debug("Account consumer: записи обработаны");
     }
 }

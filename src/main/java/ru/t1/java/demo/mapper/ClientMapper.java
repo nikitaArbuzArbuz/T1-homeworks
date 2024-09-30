@@ -7,9 +7,9 @@ import ru.t1.java.demo.model.dto.ClientDto;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE,
         componentModel = MappingConstants.ComponentModel.SPRING)
 public interface ClientMapper {
-    Client toEntity(ClientDto clientDto);
+    Client map(ClientDto clientDto);
 
-    ClientDto toDto(Client client);
+    ClientDto map(Client client);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Client partialUpdate(ClientDto clientDto, @MappingTarget Client client);

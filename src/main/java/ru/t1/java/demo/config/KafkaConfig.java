@@ -89,7 +89,8 @@ public class KafkaConfig {
     }
 
     @Bean
-    ConcurrentKafkaListenerContainerFactory<String, ClientDto> kafkaListenerContainerFactory(@Qualifier("consumerListenerFactory") ConsumerFactory<String, ClientDto> consumerFactory) {
+    ConcurrentKafkaListenerContainerFactory<String, ClientDto> kafkaListenerContainerFactory(
+            @Qualifier("consumerListenerFactory") ConsumerFactory<String, ClientDto> consumerFactory) {
         return createKafkaListenerContainerFactory(consumerFactory);
     }
 
