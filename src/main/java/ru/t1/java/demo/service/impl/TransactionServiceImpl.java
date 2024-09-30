@@ -17,7 +17,6 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     @Transactional
     public void saveTransaction(List<Transaction> transactions) {
-        repository.saveAll(transactions)
-                .forEach(repository::saveAndFlush);
+        transactions.forEach(repository::saveAndFlush);
     }
 }

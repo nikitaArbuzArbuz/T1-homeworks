@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.t1.java.demo.aop.HandlingResult;
 import ru.t1.java.demo.aop.LogException;
-import ru.t1.java.demo.aop.Track;
+import ru.t1.java.demo.aop.Metric;
 import ru.t1.java.demo.kafka.producers.KafkaDefaultProducer;
 import ru.t1.java.demo.model.dto.AccountDto;
 import ru.t1.java.demo.util.JsonParser;
@@ -23,7 +23,7 @@ public class AccountController {
     private String topic;
 
     @LogException
-    @Track
+    @Metric
     @GetMapping(value = "/account/parse")
     @HandlingResult
     public void parseSource() {

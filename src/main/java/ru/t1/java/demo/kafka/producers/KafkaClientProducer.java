@@ -12,12 +12,12 @@ import java.util.UUID;
 @Component
 public class KafkaClientProducer {
 
-    private final KafkaTemplate template;
+    private final KafkaTemplate<String, Object> kafkaTemplate;
 
     public void send(Long id) {
         try {
-            template.sendDefault(UUID.randomUUID().toString(), id).get();
-            template.flush();
+            kafkaTemplate.sendDefault(UUID.randomUUID().toString(), id).get();
+            kafkaTemplate.flush();
         } catch (Exception ex) {
             log.error(ex.getMessage(), ex);
         }
@@ -26,8 +26,8 @@ public class KafkaClientProducer {
 
     public void sendTo(String topic, Object o) {
         try {
-            template.send(topic, o).get();
-            template.flush();
+            kafkaTemplate.send(topic, o).get();
+            kafkaTemplate.flush();
         } catch (Exception ex) {
             log.error(ex.getMessage(), ex);
         }

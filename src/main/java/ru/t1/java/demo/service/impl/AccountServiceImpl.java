@@ -19,7 +19,6 @@ public class AccountServiceImpl implements AccountService {
     @Override
     @Transactional
     public void saveAccount(List<Account> accounts) {
-        repository.saveAll(accounts)
-                .forEach(repository::saveAndFlush);
+        accounts.forEach(repository::saveAndFlush);
     }
 }

@@ -25,8 +25,7 @@ public class ClientServiceImpl implements ClientService {
     @Override
     @Transactional
     public void registerClients(List<Client> clients) {
-        repository.saveAll(clients)
-                .forEach(repository::saveAndFlush);
+        clients.forEach(repository::saveAndFlush);
     }
 
     @Override
