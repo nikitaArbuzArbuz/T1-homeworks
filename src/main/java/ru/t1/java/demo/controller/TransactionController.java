@@ -22,13 +22,18 @@ public class TransactionController {
     @Value("${t1.kafka.topic.t1_demo_transactions}")
     private String topic;
 
-    @LogException
-    @Track
+//    @LogException
+//    @Track
     @GetMapping(value = "/transaction/parse")
     @HandlingResult
-
     public void parseSource() {
         List<TransactionDto> transactionDataDtos = JsonParser.parseJsonData("TRANSACTION_DATA", TransactionDto[].class);
         transactionDataDtos.forEach(dto -> kafkaProducer.sendTo(topic, dto));
+        try {
+            throw new RuntimeException("Exception!");
+        } catch (Exception e) {
+            System.out.println("Exception caught: " + e.getMessage());
+            throw e;
+        }
     }
 }

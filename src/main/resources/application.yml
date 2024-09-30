@@ -18,6 +18,8 @@ logging:
     ru.t1.java.demo.controller.ClientController: DEBUG
 
 t1:
+  aspect:
+    time-to-execute: 3000
   scan-path: ru.t1.java.demo
   kafka:
     bootstrap:
@@ -35,6 +37,8 @@ t1:
       client_transactions: t1_demo_client_transactions
       t1_demo_accounts: t1_demo_accounts
       t1_demo_transactions: t1_demo_transactions
+      t1_demo_metric_trace: t1_demo_metric_trace
+      t1_demo_error_trace: t1_demo_error_trace
 
     listener:
       poll-timeout: 1000

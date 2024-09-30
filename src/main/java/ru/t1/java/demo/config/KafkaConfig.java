@@ -46,6 +46,8 @@ public class KafkaConfig {
     private String maxPollIntervalsMs;
     @Value("${t1.kafka.topic.client_id_registered}")
     private String clientTopic;
+    @Value("${t1.aspect.time-to-execute}")
+    private int maxTimeToExecute;
 
     @Bean
     public ConsumerFactory<String, ClientDto> consumerListenerFactory() {
