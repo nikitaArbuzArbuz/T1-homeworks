@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.t1.java.demo.aop.HandlingResult;
 import ru.t1.java.demo.aop.LogException;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/account")
 @Slf4j
 public class AccountController {
     private static final String ACCOUNT_DATA = "ACCOUNT_DATA";
@@ -25,7 +27,7 @@ public class AccountController {
 
     @LogException
     @Metric
-    @GetMapping(value = "/account/parse")
+    @GetMapping(value = "/parse")
     @HandlingResult
     public void parseSource() {
         List<AccountDto> accountData = JsonParser.parseJsonData(ACCOUNT_DATA, AccountDto[].class);

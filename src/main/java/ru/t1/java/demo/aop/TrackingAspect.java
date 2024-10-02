@@ -19,7 +19,7 @@ public class TrackingAspect {
     private static final AtomicLong START_TIME = new AtomicLong();
 
     @Before("@annotation(ru.t1.java.demo.aop.Track)")
-    public void logExecTime(JoinPoint joinPoint){
+    public void logExecTime(JoinPoint joinPoint) {
         log.info("Старт метода: {}", joinPoint.getSignature().toShortString());
         START_TIME.addAndGet(System.currentTimeMillis());
     }

@@ -1,17 +1,19 @@
 package ru.t1.java.demo.mapper;
 
 
-import org.mapstruct.*;
+import lombok.extern.slf4j.Slf4j;
+import org.mapstruct.BeanMapping;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import ru.t1.java.demo.model.Transaction;
 import ru.t1.java.demo.model.dto.TransactionDto;
 
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE,
-        componentModel = MappingConstants.ComponentModel.SPRING)
-public interface TransactionMapper {
-    Transaction map(TransactionDto transactionDto);
-
-    TransactionDto map(Transaction transaction);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Transaction partialUpdate(TransactionDto transactionDto, @MappingTarget Transaction transaction);
+@Mapper(componentModel = "spring")
+@Slf4j
+public abstract class TransactionMapper {
+    @BeanMapping(ignoreByDefault = true)
+    @Mapping(target = "amount", source = "amount")
+    @Mapping(target = "clientId", source = "clientId")
+    @Mapping(target = "accountId", source = "accountId")
+    public abstract Transaction map(TransactionDto dto);
 }

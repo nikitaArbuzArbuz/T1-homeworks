@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.t1.java.demo.aop.HandlingResult;
 import ru.t1.java.demo.model.dto.TransactionDto;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/transaction")
 @Slf4j
 public class TransactionController {
     private static final String TRANSACTION_DATA = "TRANSACTION_DATA";
@@ -22,7 +24,7 @@ public class TransactionController {
     private String topic;
 
 
-    @GetMapping(value = "/transaction/parse")
+    @GetMapping(value = "/parse")
     @HandlingResult
     public void parseSource() {
         List<TransactionDto> transactionDataDtos = JsonParser.parseJsonData(TRANSACTION_DATA, TransactionDto[].class);
