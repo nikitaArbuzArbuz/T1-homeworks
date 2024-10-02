@@ -1,15 +1,6 @@
 version: '1.0'
 
 services:
-
-  postgres:
-    image: postgres:11.13
-    container_name: t1_java_demo
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=0000
   zookeeper_t1:
     image: confluentinc/cp-zookeeper:5.5.0
     hostname: zookeeper_t1
@@ -37,3 +28,13 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+
+  postgres:
+    image: postgres:16.1-alpine
+    container_name: t1_java_demo
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: t1_demo

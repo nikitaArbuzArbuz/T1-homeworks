@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import ru.t1.java.demo.kafka.KafkaClientProducer;
+import org.springframework.transaction.annotation.Transactional;
 import ru.t1.java.demo.model.Client;
 import ru.t1.java.demo.model.dto.ClientDto;
 import ru.t1.java.demo.repository.ClientRepository;
@@ -21,14 +21,11 @@ import java.util.List;
 public class ClientServiceImpl implements ClientService {
 
     private final ClientRepository repository;
-    private final KafkaClientProducer kafkaClientProducer;
 
     @Override
+    @Transactional
     public void registerClients(List<Client> clients) {
-        repository.saveAll(clients)
-                .stream()
-                .map(Client::getId)
-                .forEach(kafkaClientProducer::send);
+        clients.forEach(repository::saveAndFlush);
     }
 
     @Override

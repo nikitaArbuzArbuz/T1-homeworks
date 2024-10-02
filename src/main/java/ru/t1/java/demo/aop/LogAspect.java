@@ -34,9 +34,8 @@ public class LogAspect {
 //    }
 
     @AfterThrowing(pointcut = "@annotation(LogException)")
-    @Order(0)
     public void logExceptionAnnotation(JoinPoint joinPoint) {
-        System.err.println("ASPECT EXCEPTION ANNOTATION: Logging exception: {}" + joinPoint.getSignature().getName());
+//        System.err.println("ASPECT EXCEPTION ANNOTATION: Logging exception: {}" + joinPoint.getSignature().getName());
     }
 
     @AfterReturning(

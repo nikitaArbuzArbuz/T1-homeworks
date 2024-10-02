@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "account_type": "CREDIT",
+    "balance": 764567.86
+  },
+  {
+    "id": 2,
+    "account_type": "DEBIT",
+    "balance": 83098.87
+  },
+  {
+    "id": 3,
+    "account_type": "CREDIT",
+    "balance": 45433.15
+  },
+  {
+    "id": 4,
+    "account_type": "CREDIT",
+    "balance": 618251.07
+  },
+  {
+    "id": 5,
+    "account_type": "DEBIT",
+    "balance": 977140.82
+  },
+  {
+    "id": 6,
+    "account_type": "DEBIT",
+    "balance": 939263.28
+  },
+  {
+    "id": 7,
+    "account_type": "DEBIT",
+    "balance": 894998.76
+  },
+  {
+    "id": 8,
+    "account_type": "DEBIT",
+    "balance": 916740.15
+  },
+  {
+    "id": 9,
+    "account_type": "CREDIT",
+    "balance": 732729.89
+  },
+  {
+    "id": 10,
+    "account_type": "CREDIT",
+    "balance": 989953.68
+  },
+  {
+    "id": 11,
+    "account_type": "CREDIT",
+    "balance": 903965.38
+  },
+  {
+    "id": 12,
+    "account_type": "DEBIT",
+    "balance": 105997.99
+  },
+  {
+    "id": 13,
+    "account_type": "CREDIT",
+    "balance": 938048.14
+  },
+  {
+    "id": 14,
+    "account_type": "CREDIT",
+    "balance": 442706.07
+  },
+  {
+    "id": 15,
+    "account_type": "CREDIT",
+    "balance": 988208.02
+  },
+  {
+    "id": 16,
+    "account_type": "DEBIT",
+    "balance": 263110.13
+  },
+  {
+    "id": 17,
+    "account_type": "CREDIT",
+    "balance": 169806.31
+  },
+  {
+    "id": 18,
+    "account_type": "DEBIT",
+    "balance": 494022.76
+  },
+  {
+    "id": 19,
+    "account_type": "DEBIT",
+    "balance": 235704.21
+  },
+  {
+    "id": 20,
+    "account_type": "DEBIT",
+    "balance": 410907.14
+  },
+  {
+    "id": 21,
+    "account_type": "CREDIT",
+    "balance": 287329.7
+  },
+  {
+    "id": 22,
+    "account_type": "CREDIT",
+    "balance": 728916.99
+  },
+  {
+    "id": 23,
+    "account_type": "DEBIT",
+    "balance": 922544.67
+  },
+  {
+    "id": 24,
+    "account_type": "CREDIT",
+    "balance": 391979.46
+  },
+  {
+    "id": 25,
+    "account_type": "CREDIT",
+    "balance": 848783.7
+  },
+  {
+    "id": 26,
+    "account_type": "CREDIT",
+    "balance": 531640.97
+  },
+  {
+    "id": 27,
+    "account_type": "CREDIT",
+    "balance": 340267.55
+  },
+  {
+    "id": 28,
+    "account_type": "DEBIT",
+    "balance": 724162.17
+  },
+  {
+    "id": 29,
+    "account_type": "CREDIT",
+    "balance": 135114.35
+  },
+  {
+    "id": 30,
+    "account_type": "DEBIT",
+    "balance": 811371.44
+  },
+  {
+    "id": 31,
+    "account_type": "DEBIT",
+    "balance": 985681.7
+  },
+  {
+    "id": 32,
+    "account_type": "DEBIT",
+    "balance": 778211.19
+  },
+  {
+    "id": 33,
+    "account_type": "CREDIT",
+    "balance": 698776.35
+  },
+  {
+    "id": 34,
+    "account_type": "CREDIT",
+    "balance": 458727.65
+  },
+  {
+    "id": 35,
+    "account_type": "CREDIT",
+    "balance": 176906.54
+  },
+  {
+    "id": 36,
+    "account_type": "DEBIT",
+    "balance": 892023.81
+  },
+  {
+    "id": 37,
+    "account_type": "CREDIT",
+    "balance": 565661.55
+  },
+  {
+    "id": 38,
+    "account_type": "DEBIT",
+    "balance": 174929.35
+  },
+  {
+    "id": 39,
+    "account_type": "DEBIT",
+    "balance": 370223.51
+  },
+  {
+    "id": 40,
+    "account_type": "CREDIT",
+    "balance": 703563.12
+  },
+  {
+    "id": 41,
+    "account_type": "CREDIT",
+    "balance": 298302.82
+  },
+  {
+    "id": 42,
+    "account_type": "DEBIT",
+    "balance": 118846.16
+  },
+  {
+    "id": 43,
+    "account_type": "DEBIT",
+    "balance": 916261.14
+  },
+  {
+    "id": 44,
+    "account_type": "DEBIT",
+    "balance": 225349.97
+  },
+  {
+    "id": 45,
+    "account_type": "DEBIT",
+    "balance": 760383.25
+  },
+  {
+    "id": 46,
+    "account_type": "DEBIT",
+    "balance": 510520.25
+  },
+  {
+    "id": 47,
+    "account_type": "DEBIT",
+    "balance": 762807.77
+  },
+  {
+    "id": 48,
+    "account_type": "CREDIT",
+    "balance": 789263.34
+  },
+  {
+    "id": 49,
+    "account_type": "DEBIT",
+    "balance": 699582.23
+  },
+  {
+    "id": 50,
+    "account_type": "DEBIT",
+    "balance": 355061.36
+  },
+  {
+    "id": 51,
+    "account_type": "CREDIT",
+    "balance": 67910.32
+  },
+  {
+    "id": 52,
+    "account_type": "CREDIT",
+    "balance": 420783.35
+  },
+  {
+    "id": 53,
+    "account_type": "CREDIT",
+    "balance": 704039.32
+  },
+  {
+    "id": 54,
+    "account_type": "CREDIT",
+    "balance": 735584.53
+  },
+  {
+    "id": 55,
+    "account_type": "CREDIT",
+    "balance": 372983.29
+  },
+  {
+    "id": 56,
+    "account_type": "DEBIT",
+    "balance": 691379.28
+  },
+  {
+    "id": 57,
+    "account_type": "CREDIT",
+    "balance": 495642.45
+  },
+  {
+    "id": 58,
+    "account_type": "CREDIT",
+    "balance": 201759.75
+  },
+  {
+    "id": 59,
+    "account_type": "DEBIT",
+    "balance": 413721.89
+  },
+  {
+    "id": 60,
+    "account_type": "CREDIT",
+    "balance": 337395.71
+  },
+  {
+    "id": 61,
+    "account_type": "CREDIT",
+    "balance": 325272.85
+  },
+  {
+    "id": 62,
+    "account_type": "CREDIT",
+    "balance": 326235.63
+  },
+  {
+    "id": 63,
+    "account_type": "DEBIT",
+    "balance": 239788.76
+  },
+  {
+    "id": 64,
+    "account_type": "DEBIT",
+    "balance": 759406.1
+  },
+  {
+    "id": 65,
+    "account_type": "CREDIT",
+    "balance": 191426.52
+  },
+  {
+    "id": 66,
+    "account_type": "DEBIT",
+    "balance": 280378.96
+  },
+  {
+    "id": 67,
+    "account_type": "CREDIT",
+    "balance": 517403.27
+  },
+  {
+    "id": 68,
+    "account_type": "CREDIT",
+    "balance": 170733.71
+  },
+  {
+    "id": 69,
+    "account_type": "CREDIT",
+    "balance": 352598.15
+  },
+  {
+    "id": 70,
+    "account_type": "CREDIT",
+    "balance": 283085.2
+  },
+  {
+    "id": 71,
+    "account_type": "CREDIT",
+    "balance": 821730.48
+  },
+  {
+    "id": 72,
+    "account_type": "DEBIT",
+    "balance": 793523.24
+  },
+  {
+    "id": 73,
+    "account_type": "CREDIT",
+    "balance": 937099.66
+  },
+  {
+    "id": 74,
+    "account_type": "DEBIT",
+    "balance": 630008.07
+  },
+  {
+    "id": 75,
+    "account_type": "DEBIT",
+    "balance": 615956.09
+  },
+  {
+    "id": 76,
+    "account_type": "DEBIT",
+    "balance": 162232.82
+  },
+  {
+    "id": 77,
+    "account_type": "CREDIT",
+    "balance": 725203.48
+  },
+  {
+    "id": 78,
+    "account_type": "CREDIT",
+    "balance": 936845.13
+  },
+  {
+    "id": 79,
+    "account_type": "DEBIT",
+    "balance": 627003.82
+  },
+  {
+    "id": 80,
+    "account_type": "CREDIT",
+    "balance": 911834.74
+  },
+  {
+    "id": 81,
+    "account_type": "DEBIT",
+    "balance": 785099.92
+  },
+  {
+    "id": 82,
+    "account_type": "CREDIT",
+    "balance": 634060.82
+  },
+  {
+    "id": 83,
+    "account_type": "DEBIT",
+    "balance": 327922.47
+  },
+  {
+    "id": 84,
+    "account_type": "DEBIT",
+    "balance": 476976.48
+  },
+  {
+    "id": 85,
+    "account_type": "CREDIT",
+    "balance": 83555.4
+  },
+  {
+    "id": 86,
+    "account_type": "CREDIT",
+    "balance": 171302.79
+  },
+  {
+    "id": 87,
+    "account_type": "CREDIT",
+    "balance": 225012.46
+  },
+  {
+    "id": 88,
+    "account_type": "DEBIT",
+    "balance": 800375.16
+  },
+  {
+    "id": 89,
+    "account_type": "CREDIT",
+    "balance": 850609.03
+  },
+  {
+    "id": 90,
+    "account_type": "DEBIT",
+    "balance": 483704.88
+  },
+  {
+    "id": 91,
+    "account_type": "CREDIT",
+    "balance": 917939.4
+  },
+  {
+    "id": 92,
+    "account_type": "CREDIT",
+    "balance": 610562.93
+  },
+  {
+    "id": 93,
+    "account_type": "DEBIT",
+    "balance": 155386.4
+  },
+  {
+    "id": 94,
+    "account_type": "DEBIT",
+    "balance": 436742.8
+  },
+  {
+    "id": 95,
+    "account_type": "CREDIT",
+    "balance": 195804.76
+  },
+  {
+    "id": 96,
+    "account_type": "DEBIT",
+    "balance": 749338.72
+  },
+  {
+    "id": 97,
+    "account_type": "DEBIT",
+    "balance": 597297.57
+  },
+  {
+    "id": 98,
+    "account_type": "DEBIT",
+    "balance": 105148.41
+  },
+  {
+    "id": 99,
+    "account_type": "DEBIT",
+    "balance": 142516.86
+  },
+  {
+    "id": 100,
+    "account_type": "CREDIT",
+    "balance": 304474.18
+  }
+]
