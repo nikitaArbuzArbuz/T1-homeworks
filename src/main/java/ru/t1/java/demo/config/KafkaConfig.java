@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.*;
 import org.springframework.kafka.listener.CommonErrorHandler;
@@ -21,6 +22,8 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.springframework.util.backoff.FixedBackOff;
 import ru.t1.java.demo.kafka.MessageDeserializer;
 import ru.t1.java.demo.kafka.producers.KafkaClientProducer;
+import ru.t1.java.demo.kafka.producers.KafkaDefaultProducer;
+import ru.t1.java.demo.kafka.producers.KafkaErrorTraceProducer;
 import ru.t1.java.demo.model.dto.AccountDto;
 import ru.t1.java.demo.model.dto.ClientDto;
 import ru.t1.java.demo.model.dto.TransactionDto;
@@ -129,7 +132,7 @@ public class KafkaConfig {
         return handler;
     }
 
-    @Bean
+    @Bean("client")
     public KafkaTemplate<String, Object> kafkaTemplate(ProducerFactory<String, Object> producerPatFactory) {
         return new KafkaTemplate<>(producerPatFactory);
     }
@@ -138,7 +141,8 @@ public class KafkaConfig {
     @ConditionalOnProperty(value = "t1.kafka.producer.enable",
             havingValue = "true",
             matchIfMissing = true)
-    public KafkaClientProducer producerClient(KafkaTemplate template) {
+    public KafkaClientProducer producerClient(@Qualifier("client") KafkaTemplate template) {
+        template.setDefaultTopic(clientTopic);
         return new KafkaClientProducer(template);
     }
 
